@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Furmily - Home</title>
+    <meta
+      name="viewport"
+      content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+
+    <script
+      type="module"
+      src="https://unpkg.com/@ionic/pwa-elements@latest/dist/ionicpwaelements/ionicpwaelements.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/@ionic/pwa-elements@latest/dist/ionicpwaelements/ionicpwaelements.js"
+    ></script>
+
+    <link rel="icon" type="image/x-icon" href="./assets/icon/logo.jpg" />
+    <link rel="manifest" href="./manifest.json" />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <script type="module" src="./js/system/index2.js"></script>
+
+    <meta name="theme-color" content="#31d53d" />
+  </head>
+  <body class="d-flex flex-column">
+      <!-- ======= Header ======= -->
+      <header id="header" class="header fixed-top d-flex align-items-center">
+
+      <div class="d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+          <img src="./assets/imgs/logo.png" alt="">
+          <span class="d-none d-lg-block">Furmily</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+      </div><!-- End Logo -->
+
+      <!--Alert Notification-->
+      <div class="alert alert-success d-none" role="alert"></div>
+      <div class="alert alert-danger d-none" role="alert"></div>
+  
+      <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+  
+          <li class="nav-item dropdown pe-3">
+  
+          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+              <img src="./assets/imgs/brusco.jpeg" alt="Profile" class="rounded-circle">
+              <span class="d-none d-md-block dropdown-toggle ps-2">Brusco</span>
+          </a><!-- End Profile Iamge Icon -->
+  
+          <!--Profile Nav -->
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+            <div class="container-fluid ">
+              <div class="card">
+                <li>
+                  <a class="dropdown-header d-flex" href="index2.html">
+                    <img src="./assets/imgs/brusco.jpeg" width="20px" alt="" class="rounded-circle ">
+                    <h6 class="px-2">Brusco</h6>
+                  </a>
+                </li>
+
+                <li class="px-2">
+                  <hr class="dropdown-divider ">
+                </li>
+
+                <li>
+                  <a class="dropdown-header d-flex" href="index.html">
+                    <img src="./assets/imgs/golden_owner.jpg" width="20px" alt="" class="rounded-circle ">
+                    <h6 class="px-2">Luna</h6>
+                  </a>
+                </li>
+
+                <li class="px-2">
+                  <hr class="dropdown-divider ">
+                </li>
+
+                  <!-- The container to display fetched profiles -->
+                  <li id="profileListContainer" style="display: none;">
+                    <ul id="profileList" class="list-group"></ul>
+                  </li>
+                <li>
+                  <button id="seeAllProfilesBtn" class="btn btn-secondary ms-4 mb-2 ">
+                    <img src="./assets/imgs/switch acc.png" width="30"> See all profiles
+                  </button>
+                </li>
+
+              </div>
+            </div>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="add.profile.html">
+                  <img src="./assets/imgs/user-profile.png" width="15px" alt="">
+                  <span class="ms-1">Create new profile</span>
+              </a>
+            </li>
+
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+              
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="#" id="btn_signout">
+                  <img src="./assets/imgs/logout.png" width="15px" alt="">
+                  <span class="ms-1"  >Sign Out</span>
+              </a>
+            </li>
+  
+          </ul><!-- End Profile Dropdown Items -->
+          </li><!-- End Profile Nav -->
+      </ul>
+      </nav><!-- End Icons Navigation -->
+  
+  </header><!-- End Header -->
+  
+    <br>
+    <div class="container text-center mt-5">
+      <div class="container-fluid bg-light pe-4 py-3 mb-3">
+        <div class="row pb-3">
+          <div class="col ">
+            <button class="btn">
+              <a href="message2.html" class=" img-fluid"><img src="./assets/imgs/message_gray.png" alt="" width="35px"></a>
+            </button>
+            <button class="btn">
+              <a href="index2.html" class="px-5 img-fluid"><img src="./assets/imgs/cut_logo.png" alt="" width="35px"></a>
+            </button>
+            <button class="btn">
+              <a href="profile2.html" class="img-fluid"><img src="./assets/imgs/person_gray.png" alt="" width="35px"></a>
+            </button>
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="col-lg-3"></div>
+          <div class="col-lg-6">
+              <div class="card-body">
+                <div class="alert alert-secondary alert-dismissible fade show" role="alert">
+                  <img src="./assets/imgs/german_shepherd.jpg" class=" rounded mx-auto d-block img-fluid mx-3 ps-4" alt="..." width="450px">
+                  <br>
+                  <h4>Apollo, 3 years old<i>(German Shepherd)</i></h4>
+                </div>
+              </div>
+          </div>
+          <div class="col-lg-3"></div>
+        </div>
+
+            <div id="img" class=" d-flex justify-content-center flex-shrink m-0 mt-0 pt-0 md-3 sm-3">
+              <button class="btn">
+                <a href="index2.html"><img src="./assets/imgs/x.png" alt="" width="80px"></a>
+              </button>
+              <button class="btn px-" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <img src="./assets/imgs/info.png" alt="" width="70px">
+              </button>
+              <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">About</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <p>Apollo is 3 years old and is good for a studmate.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              <button class="btn">
+              <a href="message2.html"><img src="./assets/imgs/heart.png" alt="" width="80px"></a>
+              </button>
+            </div>
+
+      </div>
+    </div><!--End of Main-->
+  </body>
+  
+  </html>

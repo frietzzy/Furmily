@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Furmily - Profile2</title>
+    <meta
+      name="viewport"
+      content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+
+    <script
+      type="module"
+      src="https://unpkg.com/@ionic/pwa-elements@latest/dist/ionicpwaelements/ionicpwaelements.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/@ionic/pwa-elements@latest/dist/ionicpwaelements/ionicpwaelements.js"
+    ></script>
+
+    <link rel="icon" type="image/x-icon" href="./assets/icon/logo.jpg" />
+    <link rel="manifest" href="./manifest.json" />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <script type="module" src="./js/system/profile2.js"></script>
+
+    <meta name="theme-color" content="#31d53d" />
+  </head>
+  <body  class="d-flex flex-column min-vh-100">
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="header fixed-top d-flex align-items-center">
+  
+      <div class="d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo d-flex align-items-center">
+          <img src="./assets/imgs/logo.png" alt="">
+          <span class="d-none d-lg-block">Furmily</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div><!-- End Logo -->
+
+      <!--Alert Notification-->
+      <div class="alert alert-success d-none" role="alert"></div>
+      <div class="alert alert-danger d-none" role="alert"></div>
+
+       <!-- Get All Data -->
+      <!--<div class="row pb-5" id="get_data"></div>-->
+  
+      <nav class="header-nav ms-auto">
+        <ul class="d-flex align-items-center">
+  
+          <li class="nav-item dropdown pe-3">
+  
+            <a class="nav-link nav-profile d-flex align-items-center" href="#" data-bs-toggle="dropdown">
+              <img src="./assets/imgs/brusco.jpeg" alt="Profile" class="rounded-circle">
+              <span class="d-none d-md-block dropdown-toggle ps-2">Brusco</span>
+            </a><!-- End Profile Image Icon -->
+  
+            <!--Profile Nav -->
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+            <div class="container-fluid ">
+              <div class="card">
+                <li>
+                  <a class="dropdown-header d-flex" href="index.html">
+                    <img src="./assets/imgs/brusco.jpeg" width="20px" alt="" class="rounded-circle ">
+                    <h6 class="px-2">Brusco</h6>
+                  </a>
+                </li>
+
+                <li class="px-2">
+                  <hr class="dropdown-divider ">
+                </li>
+
+                <li>
+                  <a class="dropdown-header d-flex" href="index2.html">
+                    <img src="./assets/imgs/golden_owner.jpg" width="20px" alt="" class="rounded-circle ">
+                    <h6 class="px-2">Brusco</h6>
+                  </a>
+                </li>
+
+                <li class="px-2">
+                  <hr class="dropdown-divider ">
+                </li>
+
+                <li>
+                  <button class="btn btn-secondary ms-4 mb-2 ">
+                    <img src="./assets/imgs/switch acc.png" width="30"> See all profiles
+                  </button>
+                </li>
+
+              </div>
+            </div>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="add.profile.html">
+                  <img src="./assets/imgs/user-profile.png" width="15px" alt="">
+                  <span class="ms-1">Create new profile</span>
+              </a>
+            </li>
+
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+              
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="#" id="btn_signout">
+                  <img src="./assets/imgs/logout.png" width="15px" alt="">
+                  <span class="ms-1" >Sign Out</span>
+              </a>
+            </li>
+  
+          </ul><!-- End Profile Dropdown Items -->
+          </li><!-- End Profile Nav -->
+        </ul>
+      </nav><!-- End Icons Navigation -->
+  
+    </header><!-- End Header -->
+  
+    <br>
+    <div class="container text-center mt-5">
+      <div class="container-fluid bg-light pe-4 py-3 mb-3">
+        <div class="row pb-3">
+          <div class="col ">
+            <button class="btn">
+              <a href="message2.html" class=" img-fluid"><img src="./assets/imgs/message_gray.png" alt="" width="35px"></a>
+            </button>
+            <button class="btn">
+              <a href="index2.html" class="px-5 img-fluid"><img src="./assets/imgs/logo_gray.png" alt="" width="35px"></a>
+            </button>
+            <button class="btn">
+              <a href="profile2.html" class="img-fluid"><img src="./assets/imgs/person.png" alt="" width="35px"></a>
+            </button>
+          </div>
+        </div>
+    
+        <section id="form_profile" class="section profile">
+          <div class="row">
+            <div class="col-xl-4">
+    
+              <div class="card">
+                <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
+    
+                  <img src="./assets/imgs/brusco.jpeg" alt="Profile" class="rounded-circle" width="70">
+                  <h2>Brusco</h2>
+               
+                </div>
+              </div>
+    
+            </div>
+    
+            <div class="col-xl-8">
+    
+              <div class="card">
+                <div class="card-body pt-3">
+                  <!-- Bordered Tabs -->
+                  <ul class="nav nav-tabs nav-tabs-bordered">
+    
+                    <li class="nav-item">
+                      <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#profile-overview">Overview</button>
+                    </li>
+    
+                    <li class="nav-item">
+                      <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-edit">Edit Profile</button>
+                    </li>
+    
+                  </ul>
+                   <!--Overview Form-->
+                   <div class="tab-content pt-3 ">
+    
+                    <div class="tab-pane fade show active profile-overview text-start" id="profile-overview">
+                      <h5 class="card-title">Profile Details</h5>
+    
+                      <div class="row">
+                        <div class="col-lg-3 col-md-4 label">Name</div>
+                        <div class="col-lg-9 col-md-8">Brusco</div>
+                      </div>
+    
+                      <div class="row">
+                        <div class="col-lg-3 col-md-4 label">Year</div>
+                        <div class="col-lg-9 col-md-8">2021</div>
+                      </div>
+    
+                      <div class="row">
+                        <div class="col-lg-3 col-md-4 label">Breed</div>
+                        <div class="col-lg-9 col-md-8">Labrador half Dachshund</div>
+                      </div>
+    
+                      <div class="row">
+                        <div class="col-lg-3 col-md-4 label">Gender</div>
+                        <div class="col-lg-9 col-md-8">Male</div>
+                      </div>
+    
+                    </div><!--End of Overview Form-->
+                    
+                    <div class="tab-pane fade profile-edit pt-3 text-start" id="profile-edit">
+    
+                      <!-- Profile Edit Form -->
+                      <form  id="form_profile">
+                        <div class="row mb-3">
+                          <label for="profileImage" class="col-md-4 col-lg-3 col-form-label">Profile Image</label>
+                          <div class="col-md-8 col-lg-9">
+                            <img id="profileImage" src="./assets/imgs/brusco.jpeg" class="" alt="Profile" width="100">
+                      
+                            <div class="pt-2">
+                              <div>
+                                <input type="file" accept="image/*" name="image" id="file" onchange="loadFile(event)" style="display: none;">
+                      
+                                <label for="file" style="cursor: pointer;" class="ps-1">
+                                  <img src="./assets/imgs/upload.png" height="30px" alt="Upload Image">
+                                </label>
+                      
+                                <label for="deleteImage" style="cursor: pointer;" class="ps-4">
+                                  <img src="./assets/imgs/delete.png" height="30px" alt="Delete Image">
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      
+                        <div class="row mb-3">
+                          <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Name</label>
+                          <div class="col-md-8 col-lg-9">
+                            <input name="name" type="text" class="form-control" id="name" placeholder="Brusco">
+                          </div>
+                        </div>
+    
+                        <div class="row mb-3">
+                          <label for="year" class="col-md-4 col-lg-3 col-form-label">Year</label>
+                          <div class="col-md-8 col-lg-9">
+                            <input name="year" type="number" class="form-control" id="year" placeholder="2021">
+                          </div>
+                        </div>
+    
+                        <div class="row mb-3">
+                          <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Breed</label>
+                          <div class="col-md-8 col-lg-9">
+                            <input name="breed" type="text" class="form-control" id="breed" placeholder="Labrador half Dachshund">
+                          </div>
+                        </div>
+    
+                        <div class="row mb-3">
+                          <label for="Gender" class="col-md-4 col-lg-3 col-form-label">Gender</label>
+                          <div class="col-md-8 col-lg-9">
+                            <input name="gender" type="text" class="form-control" id="gender" placeholder="Male">
+                          </div>
+                        </div>
+
+    
+                        <div class="text-center">
+                          <button type="submit" class="btn btn-primary">Save Changes</button>
+                        </div>
+
+                      </form><!-- End Profile Edit Form -->
+    
+                    </div>
+    
+                  </div><!-- End Bordered Tabs -->
+    
+                </div>
+              </div>
+    
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <script>
+      var loadFile = function(event) {
+        var profileImage = document.getElementById('profileImage');
+        profileImage.src = URL.createObjectURL(event.target.files[0]);
+      };
+    
+      var deleteImage = function() {
+        // Select the profile image element
+        var profileImage = document.getElementById('profileImage');
+
+        // Reset the profile image to a default image
+          profileImage.src = './assets/imgs/person_gray.png'; // Replace with your default image path
+      };
+
+        // Bind the deleteImage function to the click event of the delete label
+        document.querySelector('label[for="deleteImage"]').addEventListener('click', deleteImage);
+    </script>
+
+  </body>
+  
+  </html>

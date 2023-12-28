@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Furmily - Login</title>
+    <meta
+      name="viewport"
+      content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+
+    <script
+      type="module"
+      src="https://unpkg.com/@ionic/pwa-elements@latest/dist/ionicpwaelements/ionicpwaelements.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/@ionic/pwa-elements@latest/dist/ionicpwaelements/ionicpwaelements.js"
+    ></script>
+
+    <link rel="icon" type="image/x-icon" href="./assets/icon/logo.jpg" />
+    <link rel="manifest" href="./manifest.json" />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <script type="module" src="./js/main.js"></script>
+    <script type="module" src="./js/auth/login.js"></script>
+    
+
+    <meta name="theme-color" content="#31d53d" />
+  </head>
+  <body>
+
+    <main>
+      <div id="login" class="container-fluid" >
+  
+        <section class="section register min-vh-100 d-flex flex-column align-items-center justify-content-center py-4">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center">
+  
+                <div class="d-flex justify-content-center">
+                  <a href="index.html" class="logo d-flex align-items-center w-auto">
+                    <img src="./assets/imgs/log-reg.logo.png" alt="" width="30">
+                    <span class="d-none d-lg-block">Furmily</span>
+                  </a>
+                </div><!-- End Logo -->
+  
+                <div class=" container">
+  
+                  <div class="card-body">
+  
+                    <div class="pt-4 pb-2">
+                      <h5 class="card-title text-center pb-0 fs-4 pb-2">Login</h5>
+                      <p class="text-center small">Hello, welcome back</p>
+                    </div>
+
+                     <!--Alert Notification-->
+                    <div class="alert alert-success d-none" role="alert"></div>
+                    <div class="alert alert-danger d-none" role="alert"></div>
+  
+                    <form id="form_login" >
+  
+                      <!--Email-->
+                      <div class="input-icon mb-2">
+                        <input 
+                          type="email" 
+                          placeholder="@  Email Address" 
+                          name="email" 
+                          class="form-control" 
+                          id="email" required
+                        >
+                        
+                      </div>
+  
+                      <!--Password-->
+                      <div class="input-icon mb-2">
+                        <input 
+                          type="password" 
+                          placeholder="|**  Password" 
+                          name="password" 
+                          class="form-control" 
+                          id="password" required
+                        >
+                          
+                      </div>
+  
+                      <div class="mb-2">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" name="remember" value="true" id="rememberMe">
+                          <label class="form-check-label" for="rememberMe">Remember me</label>
+                        </div>
+                      </div>
+
+                      <button class="btn btn-primary w-100 mb-3 d-flex justify-content-center align-items-center" 
+                      type="submit">Login</button>
+
+                      <div class="col-12">
+                        <p class="small mb-0">Don't have account? <a href="register.html">Sign up</a></p>
+                      </div>
+                    </form>
+  
+                  </div>
+                </div>
+  
+              </div>
+            </div>
+          </div>
+  
+        </section>
+  
+      </div>
+    </main><!-- End #main -->
+</body>
+
+</html>

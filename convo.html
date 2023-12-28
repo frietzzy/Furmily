@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8" />
+    <title>Furmily</title>
+    <meta
+    name="viewport"
+    content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+
+    <script
+    type="module"
+    src="https://unpkg.com/@ionic/pwa-elements@latest/dist/ionicpwaelements/ionicpwaelements.esm.js"
+    ></script>
+    <script
+    nomodule
+    src="https://unpkg.com/@ionic/pwa-elements@latest/dist/ionicpwaelements/ionicpwaelements.js"
+    ></script>
+
+    <link rel="icon" type="image/x-icon" href="./assets/icon/logo.jpg" />
+    <link rel="manifest" href="./manifest.json" />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <script type="module" src="./js/system/convo.js"></script>
+
+    <meta name="theme-color" content="#31d53d" />
+
+    </head>
+    <body class="d-flex flex-column">
+        <!-- ======= Header ======= -->
+        <header id="header" class="header fixed-top d-flex align-items-center">
+
+        <div class="d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo d-flex align-items-center">
+            <img src="./assets/imgs/logo.png" alt="">
+            <span class="d-none d-lg-block">Furmily</span>
+        </a>
+        <i class="bi bi-list toggle-sidebar-btn"></i>
+        </div><!-- End Logo -->
+    
+        <nav class="header-nav ms-auto">
+        <ul class="d-flex align-items-center">
+    
+            <li class="nav-item dropdown pe-3">
+    
+            <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+                <img src="./assets/imgs/golden_owner.jpg" alt="Profile" class="rounded-circle">
+                <span class="d-none d-md-block dropdown-toggle ps-2">Luna</span>
+            </a><!-- End Profile Iamge Icon -->
+    
+           <!--Profile Nav -->
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+            <div class="container-fluid ">
+              <div class="card">
+                <li>
+                  <a class="dropdown-header d-flex" href="index.html">
+                    <img src="./assets/imgs/golden_owner.jpg" width="20px" alt="" class="rounded-circle ">
+                    <h6 class="px-2">Luna</h6>
+                  </a>
+                </li>
+
+                <li class="px-2">
+                  <hr class="dropdown-divider ">
+                </li>
+
+                <li>
+                  <a class="dropdown-header d-flex" href="index2.html">
+                    <img src="./assets/imgs/brusco.jpeg" width="20px" alt="" class="rounded-circle ">
+                    <h6 class="px-2">Brusco</h6>
+                  </a>
+                </li>
+
+                <li class="px-2">
+                  <hr class="dropdown-divider ">
+                </li>
+
+                   <!-- The container to display fetched profiles -->
+                  <!--<li id="profileListContainer" style="display: none;">
+                    <ul id="profileList" class="list-group"></ul>
+                  </li>-->
+                  
+                <li>
+                  <a id="seeAllProfilesBtn" class="btn btn-secondary ms-4 mb-2" href="add.profile.html">
+                      <img src="./assets/imgs/switch acc.png" width="30"> See all profiles
+                  </a>
+                </li>
+
+              </div>
+            </div>
+
+            <!--<li>
+              <a class="dropdown-item d-flex align-items-center" href="add.profile.html">
+                  <img src="./assets/imgs/user-profile.png" width="15px" alt="">
+                  <span class="ms-1">Create new profile</span>
+              </a>
+            </li>-->
+
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+              
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="login.html" id="btn_signout">
+                  <img src="./assets/imgs/logout.png" width="15px" alt="">
+                  <span class="ms-1"  >Sign Out</span>
+              </a>
+            </li>
+  
+          </ul><!-- End Profile Dropdown Items -->
+            </li><!-- End Profile Nav -->
+        </ul>
+        </nav><!-- End Icons Navigation -->
+    
+    </header><!-- End Header -->
+    
+        <section class="section dashboard">
+
+            <br>
+            <div class="container-fluid p-0 mt-5" >
+                <div class="container d-flex ">
+                    <div class="col d-flex">
+                        <a href="message.html" class="btn btn-lg p-0"><img src="./assets/imgs/arrow.png" width="20px" alt=""></a>
+                    </div>
+                    <div class="col d-flex justify-content-center">
+                        <img src="./assets/imgs/husky.jpg" class="rounded-circle me-2" height="30px" width="30px">
+                        <h6>Amy</h6>
+                    </div>
+                    <div class="col d-flex justify-content-end"></div>
+                </div>
+            </div>
+                <hr class="border-2 opacity-50">
+                <div class="container">
+                    <div class="chat-box">
+                       
+                    </div>
+
+                    <div class="chat-box-single-line py-3 text-center">
+                        <abbr class="timestamp">December 5, 2023</abbr>
+                    </div>
+
+                    <div class="col d-flex">
+                        <img src="./assets/imgs/husky.jpg" class="rounded-circle me-2" height="30px" width="30px">
+                        <div class="card bg-lightgray p-2">Is your dog ready to stud?</div>
+                    </div>
+
+                    <div class="direct-chat-info px-5">
+                        <p class="direct-chat-timestamp">3:36 PM</p>
+                    </div>
+                    
+                    <div class="col d-flex p-3">
+                      <a href="#" id="cameraButton" class="btn btn-light btn-lg border-gray" title="Take Picture">
+                          <img src="./assets/imgs/camera.png" width="15px" alt="">
+                          <!-- Ensure to have an <img> element in your HTML to display the captured image-->
+                           <img id="capturedImage" src="" alt="Captured Image" style="display: none;">
+                      </a>
+                      <a href="#" id="uploadImageButton" class="btn btn-light btn-lg border-gray mx-1" title="Upload Image">
+                          <img src="./assets/imgs/album.png" width="15px" alt="">
+                      </a>
+                      <textarea id="messageInput" placeholder="Write your reply here..." class="form-control border-gray me-1" style="height: 50px;"></textarea>
+                      <button id="sendButton" class="justify-content-end bg-primary-light">
+                          <img src="./assets/imgs/send.png" alt="" width="25px">
+                      </button>
+                      <input type="file" id="imageUploadInput" accept="image/*" style="display: none;">
+                      <video id="videoElement" width="400" height="300" style="display: none;"></video>
+                  </div>
+            </div>
+        </section>
+    
+    </body>
+    </html>

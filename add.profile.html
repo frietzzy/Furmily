@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Furmily</title>
+    <meta
+      name="viewport"
+      content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+
+    <script
+      type="module"
+      src="https://unpkg.com/@ionic/pwa-elements@latest/dist/ionicpwaelements/ionicpwaelements.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/@ionic/pwa-elements@latest/dist/ionicpwaelements/ionicpwaelements.js"
+    ></script>
+
+    <link rel="icon" type="image/x-icon" href="./assets/icon/logo.jpg" />
+    <link rel="manifest" href="./manifest.json" />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <script type="module" src="./js/main.js"></script>
+    <script type="module" src="./js/system/add.profile.js"></script>
+
+    <meta name="theme-color" content="#31d53d" />
+  </head>
+  <body class="d-flex flex-column">
+    <!-- ======= Header ======= -->
+    <header id="header" class="header fixed-top d-flex align-items-center">
+
+      <div class="d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo d-flex align-items-center">
+          <img src="./assets/imgs/logo.png" alt="">
+          <span class="d-none d-lg-block">Furmily</span>
+        </a>
+        <i class="bi bi-list toggle-sidebar-btn"></i>
+      </div><!-- End Logo -->
+
+      <nav class="header-nav ms-auto">
+        <ul class="d-flex align-items-center">
+
+          <li class="nav-item dropdown pe-3">
+
+            <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+              <img src="./assets/imgs/golden_owner.jpg" alt="Profile" class="rounded-circle">
+              <span class="d-none d-md-block dropdown-toggle ps-2">Luna</span>
+            </a><!-- End Profile Iamge Icon -->
+
+            <!--Profile Nav -->
+            <ul id="navbar" class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+              <div class="container-fluid ">
+                <div class="card">
+                  <li>
+                    <a class="dropdown-header d-flex" href="index.html">
+                      <img src="./assets/imgs/golden_owner.jpg" width="20px" alt="" class="rounded-circle ">
+                      <h6 class="px-2">Luna</h6>
+                    </a>
+                  </li>
+
+                  <li class="px-2">
+                    <hr class="dropdown-divider ">
+                  </li>
+
+                  <li>
+                    <a class="dropdown-header d-flex" href="index2.html">
+                      <img src="./assets/imgs/brusco.jpeg" width="20px" alt="" class="rounded-circle ">
+                      <h6 class="px-2">Brusco</h6>
+                    </a>
+                  </li>
+
+                  <li class="px-2">
+                    <hr class="dropdown-divider ">
+                  </li>
+
+                    <!-- The container to display fetched profiles -->
+                    <li id="profileListContainer" style="display: none;">
+                      <ul id="profileList" class="list-group"></ul>
+                    </li>
+                    
+                  <li>
+                    <button id="seeAllProfilesBtn" class="btn btn-secondary ms-4 mb-2 ">
+                      <img src="./assets/imgs/switch acc.png" width="30"> See all profiles
+                    </button>
+                  </li>
+                  
+
+                </div>
+              </div>
+
+              <!--<li>
+                <a class="dropdown-item d-flex align-items-center" href="add.profile.html">
+                    <img src="./assets/imgs/user-profile.png" width="15px" alt="">
+                    <span class="ms-1">Create new profile</span>
+                </a>
+              </li>-->
+              
+
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+                
+              <li>
+                <a class="dropdown-item d-flex align-items-center" href="#" id="btn_signout">
+                    <img src="./assets/imgs/logout.png" width="15px" alt="">
+                    <span  class="ms-1">Sign Out</span>
+                </a>
+              </li>
+
+            </ul><!-- End Profile Dropdown Items -->
+          </li><!-- End Profile Nav -->
+        </ul>
+      </nav><!-- End Icons Navigation -->
+
+    </header><!-- End Header -->
+
+      <!-- Container -->
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col-sm-12">
+            <!-- Modal Btn and Form -->
+            <!-- Modal -->
+            <div
+              class="modal fade"
+              id="form_modal"
+              data-bs-backdrop="static"
+              data-bs-keyboard="false"
+              tabindex="-1"
+              aria-labelledby="staticBackdropLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">
+                      Add New Profile
+                    </h1>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <!-- Item Form -->
+                  <form id="form_item">
+                    <!-- Modal Body -->
+                    <div class="modal-body">
+
+                       <!-- Image File; Comment this div, if no upload functionality -->
+                       <div class="row mb-3">
+                        <div class="col-sm-12">
+                          <input
+                            class="form-control"
+                            type="file"
+                            name="image_path"
+                            accept="image/*"
+                            required
+                          />
+                        </div>
+                      </div>
+
+                      <!--Name -->
+                      <div class="row mb-3">
+                        <label for="name" class="col-md-4 col-lg-3 col-form-label">Name</label>
+                        <div class="col-sm-12">
+                          <input
+                            class="form-control"
+                            type="text"
+                            name="name"
+                            id="name"
+                            placeholder="Enter Profile Name"
+                            required
+                          />
+                        </div>
+                      </div>
+
+                      <!--year-->
+                      <div class="row mb-3">
+                        <label for="year" class="col-md-4 col-lg-3 col-form-label">Year</label>
+                        <div class="col-sm-12">
+                          <input 
+                            type="number" 
+                            placeholder="Enter Year Born" 
+                            name="year" 
+                            class="form-control" 
+                            id="year" 
+                            required
+                            >        
+                        </div>
+                      </div>
+
+                      <!--breed-->
+                      <div class="row mb-3">
+                        <label for="breed" class="col-md-4 col-lg-3 col-form-label">Breed</label>
+                        <div class="col-sm-12"> 
+                            <input 
+                              type="text" 
+                              placeholder="Enter Breed Type" 
+                              name="breed" 
+                              class="form-control" 
+                              id="breed" 
+                              required
+                            >                       
+                        </div>
+                    </div>
+
+                    <!--gender-->
+                    <div class="row mb-3">
+                        <label for="gender" class="col-md-4 col-lg-3 col-form-label">Gender</label>
+                        <div class="col-sm-12">
+                            <input 
+                              type="text" 
+                              placeholder="Enter Gender" 
+                              name="gender" 
+                              class="form-control" 
+                              id="gender" 
+                              required
+                            >                       
+                        </div>
+                    </div>
+
+                     
+                    </div>
+                    <!-- Modal Footer -->
+                    <div class="modal-footer">
+                      <button
+                        class="btn btn-primary w-25 d-flex align-items-center justify-content-center"
+                        type="submit"
+                      >
+                        Submit
+                      </button>
+                    </div>
+                  </form>
+                  <!-- End Slides Form -->
+                </div>
+              </div>
+            </div>
+            <!-- End Modal -->
+
+            <!-- Search Form -->
+            <form id="form_search">
+              <br>
+              <div class="row">
+                <div class="d-flex">
+                  <input
+                    class="form-control"
+                    type="text"
+                    name="keyword"
+                    placeholder="Search Profile"
+                  />
+                
+                  <button class="btn btn-outline-dark" type="submit">
+                    Search
+                  </button>
+                </div>
+
+                <div class="col-sm-2 d-flex justify-content-center mb-1 mt-2">
+                  <!-- Button trigger modal -->
+                  <button
+                    id="modal_show"
+                    type="button"
+                    class="btn btn-primary w-100"
+                    data-bs-toggle="modal"
+                    data-bs-target="#form_modal"
+                  >
+                    Add Profile
+                  </button>
+                  <!-- End Button trigger modal  -->
+                </div>
+              </div>
+            </form>
+
+            <hr class="mb-2"/>
+          </div>
+        </div>
+
+        <!-- Notifications -->
+        <div class="alert alert-success d-none" role="alert"></div>
+        <div class="alert alert-danger d-none" role="alert"></div>
+
+        <!-- Get All Data -->
+        <div class="row pb-5" id="get_data">
+           <!--<div class="col-sm-12 d-flex justify-content-center align-items-center">
+            <div class="spinner-border" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+            <b class="ms-2">Loading Data...</b>
+          </div>-->
+        </div>
+
+        <!-- Pagination of All Data -->
+        <div class="d-flex justify-content-center">
+          <nav aria-label="Page navigation example">
+            <ul class="pagination" id="get_pagination"></ul>
+          </nav>
+        </div>
+      </div>
+      <!-- End Container -->
+      <div class="row row-cols-1 row-cols-md-3 g-4 ps-3 " id="get_data">
+        <!--<div class="col-6 mb-2">
+            <div class="card h-100">
+                <img src="./assets/imgs/golden_owner.jpg" class="card-img-top" alt="">
+                <div class="card-body">
+                    <a href="index.html" class="link-offset-2 link-underline link-underline-opacity-0 text-dark">
+                        <h3 class="card-title">Luna</h3>
+                    </a>
+    
+                    <div class="d-flex justify-content-center align-items-center">
+                      <p>Golden Retriever</p>
+                      <div class="dropdown float-end">
+                        <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="#" id="btn_edit" data-id="${
+                                  contacts.id
+                                }">Edit</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#" id="btn_delete" data-id="${
+                                  contacts.id
+                                }">Delete Profile</a>
+                            </li>
+                        </ul>
+                      </div>
+                    </div>
+                
+                    
+                </div>
+            </div>
+        </div> -->
+      </div>
+      
+    
+</body>
+
+</html>
